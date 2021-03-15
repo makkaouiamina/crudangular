@@ -1,0 +1,47 @@
+<div class="container">
+        <h4 style="text-align: center;">Form</h4>
+        <hr>
+        <div class="row">
+        <div class="col col-lg-5"></div>
+        <div class="col col-lg-6">
+          <p [innerHTML]="action"></p>
+        <form>
+          <div class="row g-3 align-items-center form-group">
+            <div class="col-auto">
+              <input type="text" class="form-control" placeholder="id" #id [hidden]='state'>
+            </div>
+          </div>
+            <div class="row g-3 align-items-center form-group">
+              <div class="col-auto">
+                <input type="text" class="form-control" placeholder="username" #username [value]='busername'>
+              </div>
+            </div>
+            <div class="row g-3 align-items-center form-group">
+                <div class="col-auto">
+                <input type="password" class="form-control" placeholder="password" #password [value]='bpassword'>
+              </div>
+            </div>
+            <div class="row g-3 align-items-center form-group">
+                                <div class="col-auto">
+                  <input type="email" class="form-control" placeholder="nom" #nom [value]='bnom'>
+                </div>
+              </div>
+              <div class="row g-3 align-items-center form-group">
+                                <div class="col-auto">
+                  <input type="email" class="form-control" placeholder="prenom" #prenom [value]='bprenom'>
+                </div>
+              </div>
+              <div class="row g-3 align-items-center form-group">
+                <div class="col-auto">
+                  <input type="email" class="form-control" placeholder="email address" #email [value]='bemail'>
+                </div>
+              </div>
+            <button type="button"
+                    class="btn btn-primary"
+                    (click)="onSubmit(id.value,username.value, password.value, nom.value, prenom.value, email.value)"
+                    routerLink="/list">Submit</button>
+        </form>
+    </div>
+    </div>
+</div>
+
