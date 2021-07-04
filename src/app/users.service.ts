@@ -30,6 +30,10 @@ export class UsersService {
     this.users.splice(this.users.findIndex(e=>e.id === +id), 1)
   }
 
+
+
+  
+
   addUser(user: User):Observable<User>{
     return this.http.post<User>(this.backendUrl, user);
   }

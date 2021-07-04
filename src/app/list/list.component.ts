@@ -15,6 +15,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.users= this.userService.findAll();
+    
   }
 
   getUser(id){
