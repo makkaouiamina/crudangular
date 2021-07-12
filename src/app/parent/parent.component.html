@@ -1,0 +1,9 @@
+<p>parent works!</p>
+<p>Value of child componenet is : {{ CData }}</p>
+
+<input type="text" #pcomponent (input)=0>
+<hr><hr>
+<app-child [PData]="pcomponent.value" (childEvent)="CData=$event"></app-child>
+
+
+
